@@ -1,22 +1,22 @@
 /* Version 1.0 - Finite Diferences without borders condition
 
-IMPORTANT: 'semborda.x' is a modified version of the 'sfTestfd2d' program from MADAGASCAR package
+IMPORTANT: 'fdmodeling.x' is a modified version of the 'sfTestfd2d' program from MADAGASCAR package
 
 Purpose: FD modeling for a point source in a constant velocity model. The input is the velocity model, and the output are modeled filed snapshots and receiver records.
 
-CHANGES: The program outpur is a shot gather instead of a receiver record.
+CHANGES: The program output is a shot gather instead of a receiver record.
 
 Usage:
 
-	<in.rsf semborda.x rec=receptor.rsf nb=30 nt=1000 dt=0.001 > out.rsf
+	<in.rsf fdmodeling.x rec=receptor.rsf nb=30 nt=1000 dt=0.001 > out.rsf
 	< receptor.rsf sfwigle > receptor.vpl
 	sfpen receptor.vpl
 
-Programmer: Rodolfo A. C. Neves (Dirack) 12/06/2019
+Programmer: Rodolfo A. C. Neves (Dirack) 20/10/2023
 
 Email:  rodolfo_profissional@hotmail.com  
 
-Site: https://dirack.github.io
+Site: https://www.geofisicando.com
 
 */
 
@@ -254,9 +254,8 @@ int main(int argc, char* argv[])
 			
 		}
 
-		//p1[nxpad/2][35]+=wlt[it]; // Onda direta
 
-
+		/* Injeção de fontes do refletor explosivo */
 		p1[sx-100][sz]+=wlt[it]; //Injeção da fonte
 		p1[sx-90][sz]+=wlt[it]; //Injeção da fonte
 		p1[sx-80][sz]+=wlt[it]; //Injeção da fonte
@@ -281,7 +280,7 @@ int main(int argc, char* argv[])
 
 		step_forward(p0, p1);
 
-		/* Função para aplicar a borda */
+		/* Função para aplicar a condição de borda */
 		if(border) apply_sponge(p0, p1);
 
 		ptr=p0; p0=p1; p1=ptr;
