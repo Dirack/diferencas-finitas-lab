@@ -1,1 +1,1 @@
-# Experimento
+# Modelo do refletor explosivo
