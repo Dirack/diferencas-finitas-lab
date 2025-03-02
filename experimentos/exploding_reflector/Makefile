@@ -13,7 +13,7 @@
 # Licença: GPL-3.0 <https://www.gnu.org/licenses/gpl-3.0.txt>.
 
 
-all:	fdmodeling.x experiment view
+all:	fdmodeling.x experiment
 
 fdmodeling.x:	Mfdmodeling.c
 	gcc -g $< -I$$RSFSRC/include -L$$RSFSRC/lib -o $@ -lrsf -lm
@@ -34,4 +34,3 @@ help:
 	@echo "Para compilar o programa de modelagem utilize 'make fdmodeling.x'"
 	@echo "Para rodar a modelagem utilize 'make experiment'"
 	@echo "Para vizualizar o experimento utilize 'make view'"
-	@echo "Para rodar os 3 comandos acima em sequência utilize 'make'"
