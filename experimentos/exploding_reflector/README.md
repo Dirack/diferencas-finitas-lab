@@ -79,3 +79,17 @@ Se desejar visualizar a partir do terminal do shell, utilize o comando a seguir:
 ```
 xdg-open wav_com_borda.gif
 ```
+
+## Rodar o experimento completo no docker e obter somente os resultados
+
+Você pode também utilizar o comando a seguir para rodar o experimento numérico e a obtenção da imagem gif com os resultados integralmente no container do docker
+com o comando a seguir:
+
+```
+docker container run -v$(pwd):/home/tryitondocker/experimentos -t fdexperimentos bash -c "make; vpconvert format=gif wav_com_borda.vpl"
+```
+
+Oque o comando acima faz é mapear o diretóro atual para o diretório '/home/tryitondocker/experimentos' dentro do container com a opção '-v'.
+A opção '-t' diz ao docker qual imagem utilizar e por fim rodamos o bash com o comando lido de uma string a partir
+da opção '-c'. O comando basicamente roda o 'make' e depois utiliza o utilitário do Madagascar vpconvert para fazer a conversão
+dos resultados de vpl para gif.
