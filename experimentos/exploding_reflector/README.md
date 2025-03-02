@@ -61,3 +61,19 @@ make fdmodeling.x experiment
 ```
 
 Daí é só sair do container e utilizar o comando 'make view' para visualizar o resultado do experimento numérico.
+
+# Converter resultado de vpl para gif utilizando o utilitário do Madagascar
+
+O pacote Madagascar possui o programa vpconvert para conversão de arquivos de imagem do Madagascar (.vpl) para diferentes formatos
+de imagem. Se você tiver o pacote Madagascar instalado, poderá utilizar o utilitário para converter o resultado do experimento numérico,
+armazenado em 'wav_com_borda.vpl', para uma imagem gif com o comando a seguir:
+
+```
+vpconvert format=gif wav_com_borda.vpl
+```
+
+Se desejar visualizar a partir do terminal do shell, utilize o comando a seguir:
+
+```
+xdg-open wav_com_borda.gif
+```
