@@ -2,6 +2,8 @@
 
 > Este é um experimento de modelagem com diferenças finitas para exemplificar o modelo do refletor explosivo.
 
+[:arrow_up: Voltar a home](https://github.com/Dirack/diferencas-finitas-lab/tree/main)
+
 ![Experimento numérico refletor explosivo](https://github.com/Dirack/diferencas-finitas-lab/blob/main/res/wav_com_borda.gif)
 
 Neste experimento numérico, nós iremos gerar uma onda plana utilizando um conjunto de fontes pontuais (refletores explosivos) no centro do modelo.
