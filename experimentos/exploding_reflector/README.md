@@ -2,6 +2,8 @@
 
 > Este é um experimento de modelagem com diferenças finitas para exemplificar o modelo do refletor explosivo.
 
+![Experimento numérico refletor explosivo](https://github.com/Dirack/diferencas-finitas-lab/blob/main/res/wav_com_borda.gif)
+
 Neste experimento numérico, nós iremos gerar uma onda plana utilizando um conjunto de fontes pontuais (refletores explosivos) no centro do modelo.
 A ideia é ilustrar o princípio de Huygens, da superposição de difrações para formar uma frente de onda plana, e o modelo do refletor explosivo.
 
@@ -9,7 +11,7 @@ Este experimento numético é reproduzido utilizando o core do pacote de process
 pastas bin, lib e include dentro do diretório 'experimentos', de modo a tornar este programa 'standalone'. Você pode compilar e rodar este experimento
 no Linux Ubuntu utilizando 'make' ou rodar em um container do Docker, como descrito a seguir.
 
-## Quick Start (Rodar o experimento no Linux com o Maagascar já instalado)
+## Quick Start (Rodar o experimento no Linux com o Madagascar já instalado)
 
 Você pode compilar este experimento no Linux Ubuntu como descrito a seguir. Porém, precisará do Madagascar 3.0 corretamente
 instalado para rodar a modelagem com diferenças finitas e visualizar os resultados.
