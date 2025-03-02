@@ -3,10 +3,16 @@
 > Este é um experimento de modelagem com diferenças finitas para exemplificar o modelo do refletor explosivo.
 
 Neste experimento numérico, nós iremos gerar uma onda plana utilizando um conjunto de fontes pontuais (refletores explosivos) no centro do modelo.
-A ideia é ilustrar o princípio de Huygens, da superposição de difrações para formar uma frente de onda plana, e o modelo do refletor explosivo. 
+A ideia é ilustrar o princípio de Huygens, da superposição de difrações para formar uma frente de onda plana, e o modelo do refletor explosivo.
 
-## Quick Start
+Este experimento numético é reproduzido utilizando o core do pacote de processamento sísmico Madagascar 3.0. Estas dependências estão armazenaas nas
+pastas bin, lib e include dentro do diretório 'experimentos', de modo a tornar este programa 'standalone'. Você pode compilar e rodar este experimento
+no Linux Ubuntu utilizando 'make' ou rodar em um container do Docker, como descrito a seguir.
 
+## Quick Start (Rodar o experimento no Linux com o Maagascar já instalado)
+
+Você pode compilar este experimento no Linux Ubuntu como descrito a seguir. Porém, precisará do Madagascar 3.0 corretamente
+instalado para rodar a modelagem com diferenças finitas e visualizar os resultados.
 Para compilar o programa de modelagem 'Mfdmodeling.c' utilize o comando:
 
 ```
@@ -33,14 +39,14 @@ make
 
 # Compilar e rodar o experimento em um container do docker
 
-Primeiro, utilizando o Dockerfile deste diretório criamos a imagem docker com o Madagascar instalado e configurado:
+Primeiro, utilizando o Dockerfile deste diretório criamos a imagem docker com o Madagascar 3.0 instalado e configurado:
 
 ```
 docker build -t fdexperimentos . -f Dockerfile
 ```
 
-Depois de construir a imagem, podemos criar um container do docker para fazer a compilação e rodar o experimento numérico
-gerando os arquivos de saída:
+Depois de construir a imagem 'fdexperimentos', podemos criar um container do docker para fazer a compilação e rodar o experimento numérico
+gerando os arquivos de saída utilizando o diretório atual como volume mapeando o diretório '/home/tryitondocker/experimentos' dentro do container:
 
 ```
 docker run -ti -v$(pwd):/home/tryitondocker/experimentos fdexperimentos
