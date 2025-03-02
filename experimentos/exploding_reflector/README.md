@@ -1,6 +1,12 @@
 # Modelo do refletor explosivo
 
-Este é um experimento de modelagem com diferenças finitas para exemplificar o modelo do refletor explosivo.
+> Este é um experimento de modelagem com diferenças finitas para exemplificar o modelo do refletor explosivo.
+
+Neste experimento numérico, nós iremos gerar uma onda plana utilizando um conjunto de fontes pontuais (refletores explosivos) no centro do modelo.
+A ideia é ilustrar o princípio de Huygens, da superposição de difrações para formar uma frente de onda plana, e o modelo do refletor explosivo. 
+
+## Quick Start
+
 Para compilar o programa de modelagem 'Mfdmodeling.c' utilize o comando:
 
 ```
